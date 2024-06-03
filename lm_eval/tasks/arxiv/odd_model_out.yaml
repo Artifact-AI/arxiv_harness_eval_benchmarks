@@ -1,0 +1,14 @@
+group:
+  - arxiv
+task: arxiv_odd_model_out
+dataset_path: ArtifactAI/odd_model_out_benchmark
+output_type: multiple_choice
+training_split: train
+test_split: test
+doc_to_text: "{{question}}, from the following choices: {{choices}} \nAnswer:" 
+doc_to_target: "{{answer}}"
+doc_to_choice: "{{choices}}"
+metric_list:
+  - metric: acc
+metadata:
+  - version: 1.0
